@@ -1,10 +1,26 @@
-import React from 'react'
+import React from 'react';
 
-import { ExampleComponent } from 'react-moda11y'
-import 'react-moda11y/dist/index.css'
+import { Modal } from 'react-moda11y';
 
 const App = () => {
-  return <ExampleComponent text="Create React Library Example 😄" />
-}
+  return (
+    <Modal.Container close={() => false}>
+      <Modal.Header align='left'>
+        <h3>Testing Headline</h3>
+      </Modal.Header>
+      <Modal.Content>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat
+          voluptates repellendus architecto delectus placeat fugiat blanditiis
+          eos dolor nemo aliquid mollitia sapiente voluptate et illum, totam
+          ipsum voluptatem a voluptas.
+        </p>
+      </Modal.Content>
+      <Modal.Footer>
+        <button>Just some button</button>
+      </Modal.Footer>
+    </Modal.Container>
+  );
+};
 
-export default App
+export default App;
